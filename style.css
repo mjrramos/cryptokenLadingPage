@@ -1,0 +1,17 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  height: 4.5rem;
+  height: 82px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
