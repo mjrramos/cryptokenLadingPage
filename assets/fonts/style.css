@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?kopjc9');
+  src: url('fonts/icomoon.eot?kopjc9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kopjc9') format('truetype'),
+    url('fonts/icomoon.woff?kopjc9') format('woff'),
+    url('fonts/icomoon.svg?kopjc9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-coin-dollar:before {
+  content: '\e93b';
+}
+.icon-coin-yen:before {
+  content: '\e93e';
+}
+.icon-location:before {
+  content: '\e947';
+}
+.icon-menu:before {
+  content: '\e9bd';
+}
+.icon-cross:before {
+  content: '\ea0f';
+}
+.icon-mail2:before {
+  content: '\ea84';
+}
+.icon-instagram:before {
+  content: '\ea92';
+}
+.icon-whatsapp:before {
+  content: '\ea93';
+}
+.icon-github:before {
+  content: '\eab0';
+}
