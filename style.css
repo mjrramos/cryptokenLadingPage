@@ -145,6 +145,10 @@ main {
   color: var(--base-color);
 }
 
+.logo-alt span {
+  color: var(--body-color);
+}
+
 /*=========== NAVIGATION =============== */
 
 nav {
@@ -456,4 +460,19 @@ nav.show .icon-close {
 
 #contact ul li i {
   color: var(--base-color);
+}
+
+/* ==== FOOTER ======== */
+
+footer {
+  background: var(--base-color);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: var(--text-color-light);
 }
