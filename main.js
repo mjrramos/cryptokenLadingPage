@@ -7,7 +7,7 @@ for (const element of toggle) {
     nav.classList.toggle('show')
   })
 }
-/* abrir e fechar menu quando clicar nos links */
+/* fechar menu quando clicar nos links */
 
 const links = document.querySelectorAll('nav ul li a')
 
@@ -16,3 +16,18 @@ for (const link of links) {
     nav.classList.remove('show')
   })
 }
+
+/* mudar o header da página quando der scroll */
+
+const header = document.querySelector('#header')
+const navHeight = header.scrollHeight
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= navHeight) {
+    header.classList.add('scroll')
+    console.log('maior que')
+  } else {
+    header.classList.remove('scroll')
+    console.log('menor que')
+  }
+})
