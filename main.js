@@ -31,3 +31,34 @@ window.addEventListener('scroll', function () {
     console.log('menor que')
   }
 })
+
+/* Carousel library Swiper */
+
+const swiper = new Swiper('.swiper', {
+  slidersPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: false,
+  keyboard: true,
+  loop: true
+})
+
+/* ScrollReveal: Mostrar elementos quando der scroll na página */
+
+const scrollReveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true
+})
+
+scrollReveal.reveal(
+  `#home .image, #home .text,
+                     #about .image, #about .text,
+                     #services header, #services .card,
+                     #testimonials header, #testimonials .testimonials,
+                     #contact .text, #contact .links
+`,
+  { interval: 100 }
+)
