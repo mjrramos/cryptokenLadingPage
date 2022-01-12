@@ -26,7 +26,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-up-circle:before {
+.icon-arrow-up:before {
   content: '\e904';
 }
 .icon-facebook:before {
