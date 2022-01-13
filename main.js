@@ -65,10 +65,10 @@ scrollReveal.reveal(
 
 /* mudar o header da página quando der scroll */
 
-function changeHeaderWhenScroll() {
-  const header = document.querySelector('#header')
-  const navHeight = header.scrollHeight
+const header = document.querySelector('#header')
+const navHeight = header.scrollHeight
 
+function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
     console.log('maior que')
@@ -78,9 +78,8 @@ function changeHeaderWhenScroll() {
   }
 }
 
+const backToTopButton = document.querySelector('.back-to-top')
 function backToTop() {
-  const backToTopButton = document.querySelector('.back-to-top')
-
   if (window.scrollY >= 800) {
     backToTopButton.classList.add('show')
   } else {
@@ -88,8 +87,14 @@ function backToTop() {
   }
 }
 
+/* menu ativo conforme a sessão visível página */
+
+const sections = document.querySelectorAll('section[id]')
+
+function activateMenuAtCurrentSection() {}
+
+/* When Scroll */
+
 window.addEventListener('scroll', function () {
   backToTop(), changeHeaderWhenScroll()
 })
-
-/* menu ativo conforme a sessão visível página */
