@@ -22,16 +22,6 @@ for (const link of links) {
 const header = document.querySelector('#header')
 const navHeight = header.scrollHeight
 
-window.addEventListener('scroll', function () {
-  if (window.scrollY >= navHeight) {
-    header.classList.add('scroll')
-    console.log('maior que')
-  } else {
-    header.classList.remove('scroll')
-    console.log('menor que')
-  }
-})
-
 /* Carousel library Swiper */
 
 const swiper = new Swiper('.swiper', {
@@ -66,12 +56,31 @@ scrollReveal.reveal(
 
 /* botão - back to top */
 
-const backToTopButton = document.querySelector('.back-to-top')
+/* mudar o header da página quando der scroll */
 
-window.addEventListener('scroll', function () {
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.scrollHeight
+
+  if (window.scrollY >= navHeight) {
+    header.classList.add('scroll')
+    console.log('maior que')
+  } else {
+    header.classList.remove('scroll')
+    console.log('menor que')
+  }
+}
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
   if (window.scrollY >= 800) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
+}
+
+window.addEventListener('scroll', function () {
+  backToTop(), changeHeaderWhenScroll()
 })
