@@ -25,13 +25,20 @@ const navHeight = header.scrollHeight
 /* Carousel library Swiper */
 
 const swiper = new Swiper('.swiper', {
-  slidersPerView: 1,
+  slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination'
   },
   mousewheel: false,
+  loop: true,
   keyboard: true,
-  loop: true
+
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
@@ -84,3 +91,5 @@ function backToTop() {
 window.addEventListener('scroll', function () {
   backToTop(), changeHeaderWhenScroll()
 })
+
+/* menu ativo conforme a sessão visível página */
